@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type or Die</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="meme-title">Type or Die</h1>
+            <div class="settings">
+                <div class="language-selector glow-box">
+                    <button class="btn lang-btn active" data-lang="en">English</button>
+                    <button class="btn lang-btn" data-lang="ru">Русский</button>
+                    <button class="btn lang-btn" data-lang="code">&lt;Code/&gt;</button>
+                </div>
+                <div class="difficulty-selector glow-box">
+                    <button class="btn diff-btn" data-diff="easy">NOOB</button>
+                    <button class="btn diff-btn active" data-diff="medium">PRO</button>
+                    <button class="btn diff-btn" data-diff="hard">GIGA CHAD</button>
+                </div>
+                <div class="options glow-box">
+                    <label class="option">
+                        <input type="checkbox" id="punctuationToggle" checked>
+                        <span class="checkbox-text">Grammar Nazi Mode</span>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="stats glow-box">
+                <div class="stat-item">
+                    <span class="stat-label">SPEED</span>
+                    <span class="stat-value" id="wpm">0</span>
+                    <span class="stat-unit">WPM</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">ACCURACY</span>
+                    <span class="stat-value" id="accuracy">100</span>
+                    <span class="stat-unit">%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">TIME</span>
+                    <span class="stat-value" id="timer">60</span>
+                    <span class="stat-unit">s</span>
+                </div>
+            </div>
+
+            <div class="typing-area">
+                <div id="textDisplay" class="text-display glow-box"></div>
+                <input 
+                    type="text" 
+                    id="textInput" 
+                    class="text-input" 
+                    placeholder="Press START to begin your epic journey..."
+                    autocomplete="off" 
+                    autocapitalize="off" 
+                    spellcheck="false"
+                    disabled
+                >
+            </div>
+
+            <div class="control-buttons">
+                <button id="startBtn" class="btn start-btn glow-btn">START</button>
+                <button id="resetBtn" class="btn reset-btn glow-btn">RESET</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
